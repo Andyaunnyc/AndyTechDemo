@@ -9,7 +9,7 @@ WITH YearlySales AS (
     JOIN Sales.SalesOrderHeader soh ON sod.SalesOrderID = soh.SalesOrderID
     JOIN Production.Product p ON sod.ProductID = p.ProductID
     GROUP BY YEAR(soh.OrderDate), p.ProductID, p.Name
-)
+) 
 SELECT 
     [Year],
     ProductID,
